@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Solicite uma consulta cadastral</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="logout()">
+      <ion-button>
+        <ion-icon name="cog"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-row>
+    <ion-col>
+      <form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
+    
+        <ng-template ngFor let-item [ngForOf]="items">
+          <ion-list >
+            <ion-item *ngIf="item.cad_campo_tipo_idcad_campo_tipo	 == 1" text-wrap>
+                <ion-label>{{item.descricao_campo}}</ion-label>
+                <ion-input type="text" [(ngModel)]="item.texte" name="{{item.idcad_campo}}"></ion-input>   
+            </ion-item>
+            <ion-item *ngIf="item.cad_campo_tipo_idcad_campo_tipo	 == 2" text-wrap>
+                <ion-label>{{item.descricao_campo}}</ion-label>
+                <button
+                  ion-button round type="button" 
+                  (click)="openCamera(item.idcad_campo)">
+                  <ion-icon name="camera"></ion-icon>
+                </button>
+            </ion-item>
+          </ion-list>
+        </ng-template>
+        <button ion-button type="submit" block>Salvar</button>
+    
+      </form>
+    </ion-col>
+  </ion-row>
+</ion-content>

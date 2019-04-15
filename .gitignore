@@ -1,0 +1,4 @@
+/vendor
+.env
+/config/filesystems.php
+/sentinelamobile/node_modules
