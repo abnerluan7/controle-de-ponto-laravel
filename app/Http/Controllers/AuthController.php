@@ -11,6 +11,16 @@ use Illuminate\Support\Facades\Password;
 use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Log;
 
+/**
+     * class - AuthController
+     *
+     * Está classe está estruturada de forma simplista, sem dependecia de 
+     * repositories e policies para aumento de desempenho e facilidade de troca de metodo de autenticação
+     *
+     * @param IndexRequest $request
+     * @return $this|ModuloCollection
+     */
+
 class AuthController extends Controller
 {
      /**

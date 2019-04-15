@@ -25,6 +25,10 @@
 
     php artisan migrate
 
-    php artisan db:seed 
+    php artisan db:seed
 
     php -S localhost:8080 -t public/
+
+- Usuario Master (Executar Seeder)
+    login: master@master.com
+    ps: senha
